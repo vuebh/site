@@ -9,4 +9,4 @@ services:
     - '8080:8080'
     volumes:
     - '.:/app'
-    command: /bin/sh -c "yarn && quasar dev"
+    command: /bin/sh -c "quasar dev"

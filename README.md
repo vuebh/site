@@ -8,5 +8,75 @@ Para inicializar o projeto, precisamos de criar um novo diretório e instalar o 
 
 Após executado o comando acima algumas informações deve ser preenchidas como por exemplo na imagem abaixo:
 
+![alt text](https://github.com/vuebh/site/blob/master/assets/quasar_cli.png)
+
+## Dockerfile
+O Dockerfile é baseado no [real-world Vue example](https://vuejs.org/v2/cookbook/dockerize-vuejs-app.html#Real-World-Example):
+
+```
+# develop stage
+FROM node:12.4.0-alpine as develop-stage
+WORKDIR /app
+COPY package*.json ./
+RUN npm install -g @vue/cli && npm install -g @quasar/cli
+COPY . .
+# build stage
+FROM develop-stage as build-stage
+RUN npm
+RUN quasar build
+# production stage
+FROM nginx:1.17.0-alpine as production-stage
+COPY --from=build-stage /app/dist/spa-mat /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+O Dockerfile se divide em develop, build e production, o primeiro instala todas dependências em um container Node, o segundo monta a aplicação no container node enquanto o terceiro serve de artefato para o NGINX.
+
+Build do container:
 
 `docker build -t dockerize-quasar .`
+
+Iniciar o container:
+
+`docker run -it -p 8000:80 --rm dockerize-quasar`
+
+## Docker-compose
+
+```
+# for local development
+version: '3.7'
+services:
+  quasar:
+    build:
+      context: .
+      target: 'develop-stage'
+    ports:
+    - '8080:8080'
+    volumes:
+    - '.:/app'
+    command: /bin/sh -c "quasar dev"
+```
+
+Build no docker-compose: 
+`sudo docker-compose up --build`
+
+Após o build é possível acessar o projeto em http://localhost:8080 como na imagem abaixo:
+
+![alt text](https://github.com/vuebh/site/blob/master/assets/quasar_localhost.png)
+
+
+Após algumas pequenas modificações a primeira versão ficou assim:
+
+![alt text](https://github.com/vuebh/site/blob/master/assets/quasar_localhost_vuejsbh.png)
+
+Espero que eu tenha contribuído!
+
+Podem me procurar nas redes sociais por @eduardofg87
+
+
+### Referências:
+
+1. [VueJS](https://vuejs.org/)
+1. [QuasarFramework](https://quasar.dev/)
+1. [Quasar applications with Docker; initialize, develop and build](https://medium.com/@jwdobken/develop-quasar-applications-with-docker-a19c38d4a6ac)
