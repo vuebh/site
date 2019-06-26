@@ -1,5 +1,5 @@
-# site
-Site da comunidade VueJS de BH
+# Site da comunidade VueJS de BH
+A publicação também está em: https://medium.com/@eduardofg87/site-da-comunidade-vuejs-de-bh-d942e40d2830
 
 ## Inicialização do projeto Quasar
 Para inicializar o projeto, precisamos de criar um novo diretório e instalar o vue/cli. Para fazer isso basta executar o seguinte comando no terminal:
@@ -69,6 +69,8 @@ Após o build é possível acessar o projeto em http://localhost:8080 como na im
 Após algumas pequenas modificações a primeira versão ficou assim:
 
 ![alt text](https://github.com/vuebh/site/blob/master/assets/quasar_localhost_vuejsbh.png)
+
+É possível acessar o projeto online em http://vuejsbh.dev. O deploy for realizado pelo [Netlify](https://www.netlify.com/). 
 
 Espero que eu tenha contribuído!
 
