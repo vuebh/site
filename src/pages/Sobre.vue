@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-top">
-    <h4>Blog da comunidade VueJS em Belo Horizonte e região. Em breve...</h4>
+    <h3>Sobre a comunidade VueJS de BH</h3>
   </q-page>
 </template>
 

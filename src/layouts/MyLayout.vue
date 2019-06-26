@@ -36,7 +36,7 @@
             <q-item-label caption>vuejsbh.dev</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_self" href="blog">
+        <q-item clickable to="/blog">
           <q-item-section avatar>
             <q-icon name="book" />
           </q-item-section>
@@ -81,13 +81,13 @@
             <q-item-label caption>meetup.com/pt-BR/Vuejs-at-BH/</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_self" href="sobre">
+        <q-item clickable to="/sobre">
           <q-item-section avatar>
             <q-icon name="info" />
           </q-item-section>
           <q-item-section>
             <q-item-label>Sobre</q-item-label>
-            <q-item-label caption>vuejsbh.dev/sobre/</q-item-label>
+            <q-item-label caption>vuejsbh.dev/sobre</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
