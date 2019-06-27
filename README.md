@@ -70,7 +70,7 @@ Após algumas pequenas modificações a primeira versão ficou assim:
 
 ![alt text](https://github.com/vuebh/site/blob/master/assets/quasar_localhost_vuejsbh.png)
 
-É possível acessar o projeto online em http://vuejsbh.dev. O deploy for realizado pelo [Netlify](https://www.netlify.com/). 
+É possível acessar o projeto online em http://vuejsbh.dev. O deploy foi realizado pelo [Netlify](https://www.netlify.com/). 
 
 Espero que eu tenha contribuído!
 
