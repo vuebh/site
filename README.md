@@ -1,4 +1,6 @@
 # Site da comunidade VueJS de BH
+O presente artigo é um tutorial para subir containers para o ambiente de desenvolvimento do Quasar Framework v1.0.0-rc.5, um framework para VueJS de alta performance que utiliza Material Design. O site da comunidade está em https://vuejsbh.dev/ .
+
 A publicação também está em: https://medium.com/@eduardofg87/site-da-comunidade-vuejs-de-bh-d942e40d2830
 
 ## Inicialização do projeto Quasar
