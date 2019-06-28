@@ -1,4 +1,6 @@
 # Site da comunidade VueJS de BH
+[![Netlify Status](https://api.netlify.com/api/v1/badges/87bb32fd-4b00-46a2-b89c-8bb47fdd293f/deploy-status)](https://app.netlify.com/sites/vuejsbh/deploys)
+
 O presente artigo é um tutorial para subir containers para o ambiente de desenvolvimento do Quasar Framework v1.0.0-rc.5, um framework para VueJS de alta performance que utiliza Material Design. O site da comunidade está em https://vuejsbh.dev/ .
 
 A publicação também está em: https://medium.com/@eduardofg87/site-da-comunidade-vuejs-de-bh-d942e40d2830
